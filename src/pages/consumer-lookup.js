@@ -46,6 +46,8 @@ class View {
 
 		this.addEvent(this.ui.getCsv, "click", this.onGetCsvClick, this);
 
+		this.addEvent(this.ui.table.tBodies[0].rows, "click", this.onRowClick, this);
+
 		this.initPaginationForTable(this.ui.table, this.ui.pagination);
 		this.showEl(this.ui.table);
 	}
@@ -168,6 +170,14 @@ class View {
 		this.hideEl(this.ui.deleteFormWrapper);
 	}
 
+	onRowClick(e) {
+		let current = e.currentTarget;
+		_.each(this.ui.table.tBodies[0].rows,(row,i) => {
+			this.removeClass(row,'highlighted')
+		})
+		this.addClass(current,'highlighted')
+	}
+
 	onGetCsvClick(e) {
 		this.saveToCSV(this.parseTable());
 	}
@@ -229,9 +239,9 @@ class View {
 
 			_.each(indexChildren, (el, i, ar)=> {
 				if (el == currentPaginationEl) {
-					el.className = "active";
+					this.addClass(el, 'active')
 				} else {
-					el.className = "";
+					this.removeClass(el, 'active')
 				}
 			})
 
@@ -239,9 +249,9 @@ class View {
 				let from = model['currentPage'] * model['showBy']
 				let to = from + model['showBy'];
 				if (from <= index && index <= to) {
-					row.className = "";
+					this.removeClass(row, 'hide')
 				} else {
-					row.className = "hide";
+					this.addClass(row, 'hide')
 				}
 			})
 
@@ -309,9 +319,15 @@ class View {
 	hideEl(el) {
 		el.style.display = "none";
 	}
-
 	showEl(el, display = "block") {
 		el.style.display = display;
+	}
+
+	addClass(el,className) {
+		el.classList.add(className);
+	}
+	removeClass(el,className) {
+		el.classList.remove(className);
 	}
 
 }
