@@ -1,6 +1,5 @@
 console.warn("common");
 require("./css/common.styl");
-// require("./css/old.css");
 
 import 'lodash/core';
 import 'lodash/map';
