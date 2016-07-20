@@ -33,16 +33,16 @@ for (var i = 0; i < edit_row.length; i++) {
 
 
 		// display the form, and focus on a form field
-		document.getElementById('delete_form').style.display = 'none';
-		document.getElementById('create_form').style.display = 'none';
-		document.getElementById('edit_form').style.display = 'block';
+		document.getElementById('delete_form_wrapper').style.display = 'none';
+		document.getElementById('create_form_wrapper').style.display = 'none';
+		document.getElementById('edit_form_wrapper').style.display = 'block';
 		document.getElementById('e_Producer').focus();
 	}, false);
 }
 
 // to hide #edit_form when click on #cls_e button
 document.getElementById('cls_e').addEventListener('click', function () {
-	this.parentNode.style.display = 'none';
+	this.parentNode.parentNode.parentNode.style.display = 'none';
 }, false);
 
 
@@ -78,22 +78,21 @@ for (var i = 0; i < delete_row.length; i++) {
 		document.getElementById('d_OBJECT_ID').value = tr_parent.querySelector('.row_OBJECT_ID').innerHTML;
 
 		// display the form, and focus on a form field
-		document.getElementById('edit_form').style.display = 'none';
-		document.getElementById('create_form').style.display = 'none';
-		document.getElementById('delete_form').style.display = 'block';
+		document.getElementById('edit_form_wrapper').style.display = 'none';
+		document.getElementById('create_form_wrapper').style.display = 'none';
+		document.getElementById('delete_form_wrapper').style.display = 'block';
 		document.getElementById('d_submit').focus();
 	}, false);
 }
 
 // to hide #edit_form when click on #cls_d button
 document.getElementById('cls_d').addEventListener('click', function () {
-	this.parentNode.style.display = 'none';
+	this.parentNode.parentNode.parentNode.style.display = 'none';
 }, false);
 
 function goHome() {
 	var theform = document.goHome;
 }
-
 
 document.getElementById('create_row').addEventListener('click', function (cr) {
 	document.getElementById('cr_Producer').value = '';
@@ -122,13 +121,13 @@ document.getElementById('create_row').addEventListener('click', function (cr) {
 
 
 	// display the form, and focus on a form field
-	document.getElementById('create_form').style.display = 'block';
-	document.getElementById('edit_form').style.display = 'none';
-	document.getElementById('delete_form').style.display = 'none';
+	document.getElementById('create_form_wrapper').style.display = 'block';
+	document.getElementById('edit_form_wrapper').style.display = 'none';
+	document.getElementById('delete_form_wrapper').style.display = 'none';
 	document.getElementById('cr_create').focus();
 }, false);
 
 // to hide #create_form when click on #cls_c button
 document.getElementById('cls_cr').addEventListener('click', function () {
-	this.parentNode.style.display = 'none';
+	this.parentNode.parentNode.parentNode.style.display = 'none';
 }, false);

@@ -228,501 +228,527 @@ webpackConfig
 	</div>
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<form class="form-horizontal" style="display:none;" action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Producer">Producer</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_Producer" name="Producer" type="text">
-					</div>
-				</div>
-				<div class="form-group">
 
-					<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ProducerFilename" name="ProducerFilename" type="text">
-					</div>
+			<div id="create_form_wrapper" class="panel panel-success" style="display:none;" >
+				<div class="panel-heading">
+					<h3 class="panel-title col-sm-11">Create new</h3>
+					<div class="text-center"><span id="cls_cr">X</span></div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ProducerLanguage" name="ProducerLanguage" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ProducerEmail" name="ProducerEmail" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_Consumer" name="Consumer" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ConsumerLanguage" name="ConsumerLanguage" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ConsumerEmail" name="ConsumerEmail" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_ConsumerStatus" name="ConsumerStatus" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_NotifyDelivery" name="NotifyDelivery" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Actions">Actions</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_Actions" name="Actions" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_NewFilename" name="NewFilename" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_RemotePath" name="RemotePath" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_PreAction" name="PreAction" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_PostAction" name="PostAction" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_SourceEncoding" name="SourceEncoding" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_DestEncoding" name="DestEncoding" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_With" name="HEX_Repl_With" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_NewMailboxName" name="NewMailboxName" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-					<div class="col-sm-8">
-						<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-4 col-sm-8">
-						<input class="btn btn-success" id="cr_create" value="Create" type="submit">
-					</div>
-				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Producer">Producer</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_Producer" name="Producer" type="text">
+							</div>
+						</div>
+						<div class="form-group">
 
-				<input value="ConsumerLookup" name="TABLE" type="hidden">
-				<input value="CREATE" name="CRUD" type="hidden">
-				<!--<input class="button button_gr" id="cr_create" value="Create" type="submit"> <span id="cls_cr">X</span>-->
-				<span id="cls_cr">X</span>
-			</form>
-			<form class="form-horizontal" style="display:none;" action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Producer">Producer</label>
-					<div class="col-sm-8">
-						<input class=form-control"" id="e_Producer" name="Producer" type="text">
-					</div>
-					<br>
+							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ProducerFilename" name="ProducerFilename" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ProducerLanguage" name="ProducerLanguage" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ProducerEmail" name="ProducerEmail" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_Consumer" name="Consumer" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ConsumerLanguage" name="ConsumerLanguage" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ConsumerEmail" name="ConsumerEmail" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_ConsumerStatus" name="ConsumerStatus" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_NotifyDelivery" name="NotifyDelivery" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Actions">Actions</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_Actions" name="Actions" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_NewFilename" name="NewFilename" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_RemotePath" name="RemotePath" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_PreAction" name="PreAction" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_PostAction" name="PostAction" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_SourceEncoding" name="SourceEncoding" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_DestEncoding" name="DestEncoding" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_With" name="HEX_Repl_With" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_NewMailboxName" name="NewMailboxName" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-sm-8">
+								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<input class="btn btn-success" id="cr_create" value="Create" type="submit">
+							</div>
+						</div>
+
+						<input value="ConsumerLookup" name="TABLE" type="hidden">
+						<input value="CREATE" name="CRUD" type="hidden">
+					</form>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ProducerFilename" name="ProducerFilename" type="text">
-					</div>
-					<br>
+			</div>
+
+			<div id="edit_form_wrapper" class="panel panel-warning" style="display:none;" >
+				<div class="panel-heading">
+					<h3 class="panel-title col-sm-11">Update</h3>
+					<div class="text-center"><span id="cls_e">X</span></div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ProducerLanguage" name="ProducerLanguage" type="text">
-					</div>
-					<br>
+				<div class="panel-body">
+					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Producer">Producer</label>
+							<div class="col-sm-8">
+								<input class=form-control"" id="e_Producer" name="Producer" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ProducerFilename" name="ProducerFilename" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ProducerLanguage" name="ProducerLanguage" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ProducerEmail" name="ProducerEmail" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_Consumer" name="Consumer" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ConsumerLanguage" name="ConsumerLanguage" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ConsumerEmail" name="ConsumerEmail" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_ConsumerStatus" name="ConsumerStatus" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_NotifyDelivery" name="NotifyDelivery" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Actions">Actions</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_Actions" name="Actions" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_NewFilename" name="NewFilename" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_RemotePath" name="RemotePath" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_PreAction" name="PreAction" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_PostAction" name="PostAction" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_SourceEncoding" name="SourceEncoding" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_DestEncoding" name="DestEncoding" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_HEX_Repl_With" name="HEX_Repl_With" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_NewMailboxName" name="NewMailboxName" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-sm-8">
+								<input class="form-control" id="e_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="e_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<!--<input class="button button_yl" value="Update" type="submit">-->
+								<input class="btn btn-warning" value="Update" type="submit">
+							</div>
+						</div>
+						<input value="ConsumerLookup" name="TABLE" type="hidden">
+						<input value="UPDATE" name="CRUD" type="hidden">
+					</form>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ProducerEmail" name="ProducerEmail" type="text">
-					</div>
-					<br>
+			</div>
+
+			<div id="delete_form_wrapper" class="panel panel-danger" style="display:none;" >
+				<div class="panel-heading">
+					<h3 class="panel-title col-sm-11">Delete</h3>
+					<div class="text-center"><span id="cls_d">X</span></div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_Consumer" name="Consumer" type="text"> <br>
-					</div>
+				<div class="panel-body">
+					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Producer">Producer</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_Producer" name="Producer" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ProducerFilename" name="ProducerFilename" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ProducerLanguage" name="ProducerLanguage" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ProducerEmail" name="ProducerEmail" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_Consumer" name="Consumer" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ConsumerLanguage" name="ConsumerLanguage" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ConsumerEmail" name="ConsumerEmail" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_ConsumerStatus" name="ConsumerStatus" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_NotifyDelivery" name="NotifyDelivery" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Actions">Actions</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_Actions" name="Actions" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_NewFilename" name="NewFilename" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_RemotePath" name="RemotePath" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_PreAction" name="PreAction" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_PostAction" name="PostAction" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_SourceEncoding" name="SourceEncoding" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_DestEncoding" name="DestEncoding" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_HEX_Repl_With" name="HEX_Repl_With" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_NewMailboxName" name="NewMailboxName" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
+							</div>
+							<br>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
+							<div class="col-sm-8">
+								<input class="form-control" readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<!--<input class="button button_rd" id="d_submit" value="Delete" type="submit">-->
+								<input class="btn btn-danger" value="Delete" id="d_submit" value="Delete" type="submit">
+							</div>
+						</div>
+						<input value="ConsumerLookup" name="TABLE" type="hidden">
+						<input value="DELETE" name="CRUD" type="hidden">
+					</form>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ConsumerLanguage" name="ConsumerLanguage" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ConsumerEmail" name="ConsumerEmail" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_ConsumerStatus" name="ConsumerStatus" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_NotifyDelivery" name="NotifyDelivery" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Actions">Actions</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_Actions" name="Actions" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_NewFilename" name="NewFilename" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_RemotePath" name="RemotePath" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_PreAction" name="PreAction" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_PostAction" name="PostAction" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_SourceEncoding" name="SourceEncoding" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_DestEncoding" name="DestEncoding" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_HEX_Repl_With" name="HEX_Repl_With" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_NewMailboxName" name="NewMailboxName" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-					<div class="col-sm-8">
-						<input class="form-control" id="e_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="e_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-4 col-sm-8">
-						<!--<input class="button button_yl" value="Update" type="submit">-->
-						<input class="btn btn-warning" value="Update" type="submit">
-					</div>
-				</div>
-				<input value="ConsumerLookup" name="TABLE" type="hidden">
-				<input value="UPDATE" name="CRUD" type="hidden"> <span id="cls_e">X</span>
-			</form>
-			<form class="form-horizontal" style="display:none;" action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Producer">Producer</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_Producer" name="Producer" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ProducerFilename" name="ProducerFilename" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ProducerLanguage" name="ProducerLanguage" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ProducerEmail" name="ProducerEmail" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_Consumer" name="Consumer" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ConsumerLanguage" name="ConsumerLanguage" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ConsumerEmail" name="ConsumerEmail" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_ConsumerStatus" name="ConsumerStatus" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_NotifyDelivery" name="NotifyDelivery" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="Actions">Actions</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_Actions" name="Actions" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_NewFilename" name="NewFilename" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_RemotePath" name="RemotePath" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_PreAction" name="PreAction" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_PostAction" name="PostAction" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_SourceEncoding" name="SourceEncoding" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_DestEncoding" name="DestEncoding" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_HEX_Repl_With" name="HEX_Repl_With" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_NewMailboxName" name="NewMailboxName" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
-					</div>
-					<br>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
-					<div class="col-sm-8">
-						<input class="form-control" readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-4 col-sm-8">
-						<!--<input class="button button_rd" id="d_submit" value="Delete" type="submit">-->
-						<input class="btn btn-danger" value="Delete" id="d_submit" value="Delete" type="submit">
-					</div>
-				</div>
-				<input value="ConsumerLookup" name="TABLE" type="hidden">
-				<input value="DELETE" name="CRUD" type="hidden"> <span id="cls_d">X</span>
-			</form>
+			</div>
+
 		</div>
 	</div>
 	<br>
