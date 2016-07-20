@@ -1,6 +1,5 @@
 let path = require("path");
 let _ = require("lodash");
-let rimraf = require("rimraf")
 let precss = require("precss");
 let autoprefixer = require("autoprefixer");
 let HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -12,8 +11,6 @@ const DIST = path.join(ROOT, "dist");
 const PAGES = path.join(SRC, "pages");
 const COMMON_JS_CHUNK_NAME = "common";
 const COMMON_CSS_CHUNK_NAME = "css";
-
-// rimraf.sync(DIST);
 
 let config = {
 	entry: {
