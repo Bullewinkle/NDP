@@ -27,15 +27,19 @@ webpackConfig
 	<div class="clearfix l-mb-20">
 		<label class="pull-left" style="color:#7591DD; font-weight: bold; text-align:center; display: block; padding: 1px 10px;" for="create_row">ConsumerLookup
 			List</label>
-		<!--<input name="create_row" class="button button_bl" id="create_row" value="Create New" type="button">-->
-		<input name="create_row" class="pull-right btn btn-default" id="create_row" value="Create New" type="button">
+
+		<div class="btn-group pull-right" role="group" aria-label="...">
+			<!--<input name="create_row" class="button button_bl" id="create_row" value="Create New" type="button">-->
+			<button name="get_csv" class="btn btn-info" id="get_csv" type="button">Save to .csv</button>
+			<button name="create_row" class="btn btn-success" id="create_row" type="button">Create New</button>
+		</div>
 	</div>
 
 	<div style="overflow-x:auto;">
 
-		<table width="100%" id="t_id" class="table table-bordered table-hover table-striped">
+		<table width="100%" id="t_id" class="table table-bordered table-hover table-striped last-col-nowrap">
 			<thead>
-				<tr class="bg-primary">
+			<tr class="bg-primary">
 				<td class="table-col-header">DELETE</td>
 				<td class="table-col-header">EDIT</td>
 				<td class="table-col-header">Producer</td>
@@ -205,6 +209,709 @@ webpackConfig
 				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
 				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
 			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">MicrosoftAU</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr">N</td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">MicrosoftAU_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+				<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">colum.flannigan</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+				<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">test2</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail"></td>
+				<td class="row_Consumer">test1</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail"></td>
+				<td class="row_ConsumerStatus"></td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions"></td>
+				<td class="row_NewFilename"></td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char"></td>
+				<td class="row_HEX_Repl_With"></td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">colum.flannigan</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">colum.flannigan_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">185A97D8-4949-408E-B135-DB7122C99532</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">MicrosoftAU</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr">N</td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">MicrosoftAU_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+				<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">colum.flannigan</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+				<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">test2</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail"></td>
+				<td class="row_Consumer">test1</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail"></td>
+				<td class="row_ConsumerStatus"></td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions"></td>
+				<td class="row_NewFilename"></td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char"></td>
+				<td class="row_HEX_Repl_With"></td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">MicrosoftAU</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr">N</td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">MicrosoftAU_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+				<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">colum.flannigan</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+				<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">test2</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail"></td>
+				<td class="row_Consumer">test1</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail"></td>
+				<td class="row_ConsumerStatus"></td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions"></td>
+				<td class="row_NewFilename"></td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char"></td>
+				<td class="row_HEX_Repl_With"></td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">colum.flannigan</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">colum.flannigan_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">185A97D8-4949-408E-B135-DB7122C99532</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">MicrosoftAU</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr">N</td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">MicrosoftAU_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+				<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">colum.flannigan</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+				<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">test2</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail"></td>
+				<td class="row_Consumer">test1</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail"></td>
+				<td class="row_ConsumerStatus"></td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions"></td>
+				<td class="row_NewFilename"></td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char"></td>
+				<td class="row_HEX_Repl_With"></td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">MicrosoftAU</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">datainput</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr">N</td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">MicrosoftAU_|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+				<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">colum.flannigan</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+				<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+			</tr>
+			<tr class="odd">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">test2</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail"></td>
+				<td class="row_Consumer">test1</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail"></td>
+				<td class="row_ConsumerStatus"></td>
+				<td class="row_NotifyDelivery"></td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions"></td>
+				<td class="row_NewFilename"></td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char"></td>
+				<td class="row_HEX_Repl_With"></td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+				<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+			</tr>
+			<tr class="even">
+				<td class="delete_row danger">⌦</td>
+				<td class="edit_row warning">✐</td>
+				<td class="row_Producer">datainput</td>
+				<td class="row_ProducerFilename">%</td>
+				<td class="row_ProducerLanguage">ENGLISH</td>
+				<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+				<td class="row_Consumer">MicrosoftAU</td>
+				<td class="row_ConsumerLanguage">ENGLISH</td>
+				<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+				<td class="row_ConsumerStatus">A</td>
+				<td class="row_NotifyDelivery">N</td>
+				<td class="row_KeepMappingWhenErr"></td>
+				<td class="row_Actions">CHARCHANGE</td>
+				<td class="row_NewFilename">|o|</td>
+				<td class="row_RemotePath"></td>
+				<td class="row_PreAction"></td>
+				<td class="row_PostAction"></td>
+				<td class="row_SourceEncoding"></td>
+				<td class="row_DestEncoding"></td>
+				<td class="row_HEX_Repl_Char">41</td>
+				<td class="row_HEX_Repl_With">78</td>
+				<td class="row_NewMailboxName"></td>
+				<td class="row_CONSUMEREXTRACTABLE">YES</td>
+				<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+				<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+				<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+			</tr>
+
 			</tbody>
 		</table>
 
@@ -227,156 +934,156 @@ webpackConfig
 		</nav>
 	</div>
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
+		<div class="col-md-8 col-md-offset-2">
 
-			<div id="create_form_wrapper" class="panel panel-success" style="display:none;" >
-				<div class="panel-heading">
-					<h3 class="panel-title col-sm-11">Create new</h3>
-					<div class="text-center"><span id="cls_cr">X</span></div>
+			<div id="create_form_wrapper" class="panel panel-success" style="display:none;">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title col-xs-11">Create new</h3>
+					<div class="text-center col-xs-1"><span class="close-button" id="cls_cr">X</span></div>
 				</div>
 				<div class="panel-body">
 					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Producer">Producer</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="Producer">Producer</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_Producer" name="Producer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
 
-							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ProducerFilename" name="ProducerFilename" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ProducerLanguage" name="ProducerLanguage" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ProducerEmail" name="ProducerEmail" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="Consumer">Consumer</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_Consumer" name="Consumer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ConsumerLanguage" name="ConsumerLanguage" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ConsumerEmail" name="ConsumerEmail" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_ConsumerStatus" name="ConsumerStatus" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_NotifyDelivery" name="NotifyDelivery" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Actions">Actions</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="Actions">Actions</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_Actions" name="Actions" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_NewFilename" name="NewFilename" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_RemotePath" name="RemotePath" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="PreAction">PreAction</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_PreAction" name="PreAction" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="PostAction">PostAction</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_PostAction" name="PostAction" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_SourceEncoding" name="SourceEncoding" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_DestEncoding" name="DestEncoding" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_HEX_Repl_With" name="HEX_Repl_With" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_NewMailboxName" name="NewMailboxName" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-md-7">
 								<input placeholder="placeholder" class="form-control" id="cr_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-offset-4 col-sm-8">
+							<div class="col-md-offset-5 col-md-7">
 								<input class="btn btn-success" id="cr_create" value="Create" type="submit">
 							</div>
 						</div>
@@ -387,176 +1094,176 @@ webpackConfig
 				</div>
 			</div>
 
-			<div id="edit_form_wrapper" class="panel panel-warning" style="display:none;" >
-				<div class="panel-heading">
-					<h3 class="panel-title col-sm-11">Update</h3>
-					<div class="text-center"><span id="cls_e">X</span></div>
+			<div id="edit_form_wrapper" class="panel panel-warning" style="display:none;">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title col-xs-11">Update</h3>
+					<div class="text-center col-xs-1"><span class="close-button" id="cls_e">X</span></div>
 				</div>
 				<div class="panel-body">
 					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Producer">Producer</label>
-							<div class="col-sm-8">
-								<input class=form-control"" id="e_Producer" name="Producer" type="text">
+							<label class="col-md-5 control-label" for="Producer">Producer</label>
+							<div class="col-md-7">
+								<input class=form-control" id="e_Producer" name="Producer" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ProducerFilename" name="ProducerFilename" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ProducerLanguage" name="ProducerLanguage" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ProducerEmail" name="ProducerEmail" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_Consumer" name="Consumer" type="text"> <br>
+							<label class="col-md-5 control-label" for="Consumer">Consumer</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_Consumer" name="Consumer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ConsumerLanguage" name="ConsumerLanguage" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ConsumerEmail" name="ConsumerEmail" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_ConsumerStatus" name="ConsumerStatus" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_NotifyDelivery" name="NotifyDelivery" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Actions">Actions</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_Actions" name="Actions" type="text"> <br>
+							<label class="col-md-5 control-label" for="Actions">Actions</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_Actions" name="Actions" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_NewFilename" name="NewFilename" type="text"> <br>
+							<label class="col-md-5 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_NewFilename" name="NewFilename" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_RemotePath" name="RemotePath" type="text"> <br>
+							<label class="col-md-5 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_RemotePath" name="RemotePath" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_PreAction" name="PreAction" type="text"> <br>
+							<label class="col-md-5 control-label" for="PreAction">PreAction</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_PreAction" name="PreAction" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-							<div class="col-sm-8">
-								<input class="form-control" id="e_PostAction" name="PostAction" type="text"> <br>
+							<label class="col-md-5 control-label" for="PostAction">PostAction</label>
+							<div class="col-md-7">
+								<input class="form-control" id="e_PostAction" name="PostAction" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_SourceEncoding" name="SourceEncoding" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_DestEncoding" name="DestEncoding" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_HEX_Repl_With" name="HEX_Repl_With" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_NewMailboxName" name="NewMailboxName" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-md-7">
 								<input class="form-control" id="e_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="e_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
+							<label class="col-md-5 control-label" for="OBJECT_ID">OBJECT_ID</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="e_OBJECT_ID" name="OBJECT_ID" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-offset-4 col-sm-8">
+							<div class="col-md-offset-5 col-md-7">
 								<!--<input class="button button_yl" value="Update" type="submit">-->
 								<input class="btn btn-warning" value="Update" type="submit">
 							</div>
@@ -567,178 +1274,178 @@ webpackConfig
 				</div>
 			</div>
 
-			<div id="delete_form_wrapper" class="panel panel-danger" style="display:none;" >
-				<div class="panel-heading">
-					<h3 class="panel-title col-sm-11">Delete</h3>
-					<div class="text-center"><span id="cls_d">X</span></div>
+			<div id="delete_form_wrapper" class="panel panel-danger" style="display:none;">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title col-xs-11">Delete</h3>
+					<div class="text-center col-xs-1"><span class="close-button" id="cls_d">X</span></div>
 				</div>
 				<div class="panel-body">
 					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Producer">Producer</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="d_Producer" name="Producer" type="text"> <br>
+							<label class="col-md-5 control-label" for="Producer">Producer</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="d_Producer" name="Producer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerFilename">ProducerFilename</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerFilename">ProducerFilename</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ProducerFilename" name="ProducerFilename" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerLanguage">ProducerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerLanguage">ProducerLanguage</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ProducerLanguage" name="ProducerLanguage" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ProducerEmail">ProducerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ProducerEmail">ProducerEmail</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ProducerEmail" name="ProducerEmail" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Consumer">Consumer</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="d_Consumer" name="Consumer" type="text"> <br>
+							<label class="col-md-5 control-label" for="Consumer">Consumer</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="d_Consumer" name="Consumer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerLanguage">ConsumerLanguage</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ConsumerLanguage" name="ConsumerLanguage" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerEmail">ConsumerEmail</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerEmail">ConsumerEmail</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ConsumerEmail" name="ConsumerEmail" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="ConsumerStatus">ConsumerStatus</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="ConsumerStatus">ConsumerStatus</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_ConsumerStatus" name="ConsumerStatus" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NotifyDelivery">NotifyDelivery</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NotifyDelivery">NotifyDelivery</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_NotifyDelivery" name="NotifyDelivery" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="KeepMappingWhenErr">KeepMappingWhenErr</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_KeepMappingWhenErr" name="KeepMappingWhenErr" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="Actions">Actions</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="d_Actions" name="Actions" type="text"> <br>
+							<label class="col-md-5 control-label" for="Actions">Actions</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="d_Actions" name="Actions" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewFilename">NewFilename</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NewFilename">NewFilename</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_NewFilename" name="NewFilename" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="RemotePath">RemotePath</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="RemotePath">RemotePath</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_RemotePath" name="RemotePath" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PreAction">PreAction</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="d_PreAction" name="PreAction" type="text"> <br>
+							<label class="col-md-5 control-label" for="PreAction">PreAction</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="d_PreAction" name="PreAction" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="PostAction">PostAction</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="PostAction">PostAction</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_PostAction" name="PostAction" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="SourceEncoding">SourceEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="SourceEncoding">SourceEncoding</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_SourceEncoding" name="SourceEncoding" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="DestEncoding">DestEncoding</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="DestEncoding">DestEncoding</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_DestEncoding" name="DestEncoding" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_Char">HEX_Repl_Char</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="HEX_Repl_With">HEX_Repl_With</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_HEX_Repl_With" name="HEX_Repl_With" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="NewMailboxName">NewMailboxName</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="NewMailboxName">NewMailboxName</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_NewMailboxName" name="NewMailboxName" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLE" name="CONSUMEREXTRACTABLE" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLECOUNT" name="CONSUMEREXTRACTABLECOUNT" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
-							<div class="col-sm-8">
+							<label class="col-md-5 control-label" for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label>
+							<div class="col-md-7">
 								<input class="form-control" readonly id="d_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
 							</div>
-							<br>
+
 						</div>
 						<div class="form-group">
-							<label class="col-sm-4 control-label" for="OBJECT_ID">OBJECT_ID</label>
-							<div class="col-sm-8">
-								<input class="form-control" readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text"> <br>
+							<label class="col-md-5 control-label" for="OBJECT_ID">OBJECT_ID</label>
+							<div class="col-md-7">
+								<input class="form-control" readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text">
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-offset-4 col-sm-8">
+							<div class="col-md-offset-5 col-md-7">
 								<!--<input class="button button_rd" id="d_submit" value="Delete" type="submit">-->
 								<input class="btn btn-danger" value="Delete" id="d_submit" value="Delete" type="submit">
 							</div>
@@ -751,7 +1458,7 @@ webpackConfig
 
 		</div>
 	</div>
-	<br>
+
 	<div id="footer"> Copyright © 2016. NPD. All Rights Reserved. Restricted Rights</div>
 </div>
 </body>

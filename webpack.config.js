@@ -1,9 +1,16 @@
 let path = require("path");
 let _ = require("lodash");
+
+let webpack = require("webpack");
 let precss = require("precss");
 let autoprefixer = require("autoprefixer");
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
+let CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+let UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin.js");
+
+const ENV = process.env || {};
+const DEV = (ENV.NODE_ENV !== 'production');
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, "src");
@@ -39,9 +46,14 @@ let config = {
 		return [precss, autoprefixer];
 	},
 	plugins: [
-		new ExtractTextPlugin("[name].style.css")
+		new ExtractTextPlugin("[name].style.css"),
+		new CommonsChunkPlugin(COMMON_JS_CHUNK_NAME,`${COMMON_JS_CHUNK_NAME}.bundle.js`)
 	]
 };
+console.warn('dev',DEV)
+if (!DEV) {
+	config.plugins.push( new UglifyJsPlugin() )
+}
 
 
 const pages = {

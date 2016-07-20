@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "build": "npm run clean && webpack --progress --colors",
+    "build-prod": "npm run clean && NODE_ENV=production webpack -d --progress --colors",
     "watch": "npm run clean && webpack --progress --colors --watch",
     "dev": "webpack-dev-server --progress --colors",
     "clean": "rm -rf ./dist",
