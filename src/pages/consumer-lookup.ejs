@@ -1,0 +1,551 @@
+<!--
+	webpack
+	webpackConfig
+	webpackConfig
+-->
+
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>NPD_ConsumerLookup</title>
+	<script language="JavaScript">
+
+		function validateAndSubmit() {
+			var theform = document.singleDRACTIONS;
+			var df, dt;
+
+			theform.submit();
+		}
+	</script>
+</head>
+<body>
+
+<div>
+	<form action="./DRSearch" name="DRSearch" id="gohome_form" method="post">
+		<input class="button button_gr" value="Home" type="submit">
+	</form>
+</div>
+<font color="red"></font>
+<br>
+<input name="create_row" class="button button_bl" id="create_row" value="Create New" type="button"><label
+		style="color:#7591DD; font-weight: bold; float: left; text-align:center; display: block; padding: 1px 10px;"
+		for="create_row">ConsumerLookup List</label>
+<div style="overflow-x:auto;">
+
+	<table width="100%" id="t_id" class="table table-hover">
+		<tbody>
+		<tr>
+			<td class="table-col-header">DELETE</td>
+			<td class="table-col-header">EDIT</td>
+			<td class="table-col-header">Producer</td>
+			<td class="table-col-header">ProducerFilename</td>
+			<td class="table-col-header">ProducerLanguage</td>
+			<td class="table-col-header">ProducerEmail</td>
+			<td class="table-col-header">Consumer</td>
+			<td class="table-col-header">ConsumerLanguage</td>
+			<td class="table-col-header">ConsumerEmail</td>
+			<td class="table-col-header">ConsumerStatus</td>
+			<td class="table-col-header">NotifyDelivery</td>
+			<td class="table-col-header">KeepMappingWhenErr</td>
+			<td class="table-col-header">Actions</td>
+			<td class="table-col-header">NewFilename</td>
+			<td class="table-col-header">RemotePath</td>
+			<td class="table-col-header">PreAction</td>
+			<td class="table-col-header">PostAction</td>
+			<td class="table-col-header">SourceEncoding</td>
+			<td class="table-col-header">DestEncoding</td>
+			<td class="table-col-header">HEX_Repl_Char</td>
+			<td class="table-col-header">HEX_Repl_With</td>
+			<td class="table-col-header">NewMailboxName</td>
+			<td class="table-col-header">CONSUMEREXTRACTABLE</td>
+			<td class="table-col-header">CONSUMEREXTRACTABLECOUNT</td>
+			<td class="table-col-header">CONSUMEREXTRACTABLEDURATION</td>
+			<td class="table-col-header">OBJECT_ID</td>
+		</tr>
+		<tr class="odd">
+			<td style="background: #f6d8ce; cursor: pointer;" class="delete_row">⌦</td>
+			<td style="background: #f5f6ce; cursor: pointer;" class="edit_row">✐</td>
+			<td class="row_Producer">colum.flannigan</td>
+			<td class="row_ProducerFilename">%</td>
+			<td class="row_ProducerLanguage">ENGLISH</td>
+			<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+			<td class="row_Consumer">datainput</td>
+			<td class="row_ConsumerLanguage">ENGLISH</td>
+			<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+			<td class="row_ConsumerStatus">A</td>
+			<td class="row_NotifyDelivery">N</td>
+			<td class="row_KeepMappingWhenErr"></td>
+			<td class="row_Actions">CHARCHANGE</td>
+			<td class="row_NewFilename">colum.flannigan_|o|</td>
+			<td class="row_RemotePath"></td>
+			<td class="row_PreAction"></td>
+			<td class="row_PostAction"></td>
+			<td class="row_SourceEncoding"></td>
+			<td class="row_DestEncoding"></td>
+			<td class="row_HEX_Repl_Char">41</td>
+			<td class="row_HEX_Repl_With">78</td>
+			<td class="row_NewMailboxName"></td>
+			<td class="row_CONSUMEREXTRACTABLE">YES</td>
+			<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+			<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+			<td class="row_OBJECT_ID">185A97D8-4949-408E-B135-DB7122C99532</td>
+		</tr>
+		<tr class="even">
+			<td style="background: #f6d8ce; cursor: pointer;" class="delete_row">⌦</td>
+			<td style="background: #f5f6ce; cursor: pointer;" class="edit_row">✐</td>
+			<td class="row_Producer">datainput</td>
+			<td class="row_ProducerFilename">%</td>
+			<td class="row_ProducerLanguage">ENGLISH</td>
+			<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+			<td class="row_Consumer">MicrosoftAU</td>
+			<td class="row_ConsumerLanguage">ENGLISH</td>
+			<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+			<td class="row_ConsumerStatus">A</td>
+			<td class="row_NotifyDelivery">N</td>
+			<td class="row_KeepMappingWhenErr"></td>
+			<td class="row_Actions">CHARCHANGE</td>
+			<td class="row_NewFilename">|o|</td>
+			<td class="row_RemotePath"></td>
+			<td class="row_PreAction"></td>
+			<td class="row_PostAction"></td>
+			<td class="row_SourceEncoding"></td>
+			<td class="row_DestEncoding"></td>
+			<td class="row_HEX_Repl_Char">41</td>
+			<td class="row_HEX_Repl_With">78</td>
+			<td class="row_NewMailboxName"></td>
+			<td class="row_CONSUMEREXTRACTABLE">YES</td>
+			<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+			<td class="row_CONSUMEREXTRACTABLEDURATION">D15</td>
+			<td class="row_OBJECT_ID">CD5846F9-FCF5-4E4F-80E7-F1DA0E7ADC41</td>
+		</tr>
+		<tr class="odd">
+			<td style="background: #f6d8ce; cursor: pointer;" class="delete_row">⌦</td>
+			<td style="background: #f5f6ce; cursor: pointer;" class="edit_row">✐</td>
+			<td class="row_Producer">MicrosoftAU</td>
+			<td class="row_ProducerFilename">%</td>
+			<td class="row_ProducerLanguage">ENGLISH</td>
+			<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+			<td class="row_Consumer">datainput</td>
+			<td class="row_ConsumerLanguage">ENGLISH</td>
+			<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+			<td class="row_ConsumerStatus">A</td>
+			<td class="row_NotifyDelivery">N</td>
+			<td class="row_KeepMappingWhenErr">N</td>
+			<td class="row_Actions">CHARCHANGE</td>
+			<td class="row_NewFilename">MicrosoftAU_|o|</td>
+			<td class="row_RemotePath"></td>
+			<td class="row_PreAction"></td>
+			<td class="row_PostAction"></td>
+			<td class="row_SourceEncoding"></td>
+			<td class="row_DestEncoding"></td>
+			<td class="row_HEX_Repl_Char">41</td>
+			<td class="row_HEX_Repl_With">78</td>
+			<td class="row_NewMailboxName"></td>
+			<td class="row_CONSUMEREXTRACTABLE">YES</td>
+			<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+			<td class="row_CONSUMEREXTRACTABLEDURATION">M5</td>
+			<td class="row_OBJECT_ID">14269398-5435-4D1D-A54E-E0E00ADEBD61</td>
+		</tr>
+		<tr class="even">
+			<td style="background: #f6d8ce; cursor: pointer;" class="delete_row">⌦</td>
+			<td style="background: #f5f6ce; cursor: pointer;" class="edit_row">✐</td>
+			<td class="row_Producer">datainput</td>
+			<td class="row_ProducerFilename">%</td>
+			<td class="row_ProducerLanguage">ENGLISH</td>
+			<td class="row_ProducerEmail">colum.flannigan@npd.com</td>
+			<td class="row_Consumer">colum.flannigan</td>
+			<td class="row_ConsumerLanguage">ENGLISH</td>
+			<td class="row_ConsumerEmail">colum.flannigan@npd.com</td>
+			<td class="row_ConsumerStatus">A</td>
+			<td class="row_NotifyDelivery"></td>
+			<td class="row_KeepMappingWhenErr"></td>
+			<td class="row_Actions">CHARCHANGE</td>
+			<td class="row_NewFilename">|o|</td>
+			<td class="row_RemotePath"></td>
+			<td class="row_PreAction"></td>
+			<td class="row_PostAction"></td>
+			<td class="row_SourceEncoding"></td>
+			<td class="row_DestEncoding"></td>
+			<td class="row_HEX_Repl_Char">41</td>
+			<td class="row_HEX_Repl_With">78</td>
+			<td class="row_NewMailboxName"></td>
+			<td class="row_CONSUMEREXTRACTABLE">YES</td>
+			<td class="row_CONSUMEREXTRACTABLECOUNT"></td>
+			<td class="row_CONSUMEREXTRACTABLEDURATION">D5</td>
+			<td class="row_OBJECT_ID">1D14734F-DBA5-4701-8E79-807BE60F4065</td>
+		</tr>
+		<tr class="odd">
+			<td style="background: #f6d8ce; cursor: pointer;" class="delete_row">⌦</td>
+			<td style="background: #f5f6ce; cursor: pointer;" class="edit_row">✐</td>
+			<td class="row_Producer">test2</td>
+			<td class="row_ProducerFilename">%</td>
+			<td class="row_ProducerLanguage">ENGLISH</td>
+			<td class="row_ProducerEmail"></td>
+			<td class="row_Consumer">test1</td>
+			<td class="row_ConsumerLanguage">ENGLISH</td>
+			<td class="row_ConsumerEmail"></td>
+			<td class="row_ConsumerStatus"></td>
+			<td class="row_NotifyDelivery"></td>
+			<td class="row_KeepMappingWhenErr"></td>
+			<td class="row_Actions"></td>
+			<td class="row_NewFilename"></td>
+			<td class="row_RemotePath"></td>
+			<td class="row_PreAction"></td>
+			<td class="row_PostAction"></td>
+			<td class="row_SourceEncoding"></td>
+			<td class="row_DestEncoding"></td>
+			<td class="row_HEX_Repl_Char"></td>
+			<td class="row_HEX_Repl_With"></td>
+			<td class="row_NewMailboxName"></td>
+			<td class="row_CONSUMEREXTRACTABLE">YES</td>
+			<td class="row_CONSUMEREXTRACTABLECOUNT">9</td>
+			<td class="row_CONSUMEREXTRACTABLEDURATION"></td>
+			<td class="row_OBJECT_ID">9DBF7CB7-D7B7-445D-91E1-F2DF6A99381C</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+<form action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
+	<div class="text">
+		<label for="Producer">Producer</label><input id="cr_Producer" name="Producer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerFilename">ProducerFilename</label><input id="cr_ProducerFilename" name="ProducerFilename"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerLanguage">ProducerLanguage</label><input id="cr_ProducerLanguage" name="ProducerLanguage"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerEmail">ProducerEmail</label><input id="cr_ProducerEmail" name="ProducerEmail" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Consumer">Consumer</label><input id="cr_Consumer" name="Consumer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerLanguage">ConsumerLanguage</label><input id="cr_ConsumerLanguage" name="ConsumerLanguage"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerEmail">ConsumerEmail</label><input id="cr_ConsumerEmail" name="ConsumerEmail" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerStatus">ConsumerStatus</label><input id="cr_ConsumerStatus" name="ConsumerStatus"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NotifyDelivery">NotifyDelivery</label><input id="cr_NotifyDelivery" name="NotifyDelivery"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="KeepMappingWhenErr">KeepMappingWhenErr</label><input id="cr_KeepMappingWhenErr"
+																		 name="KeepMappingWhenErr" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Actions">Actions</label><input id="cr_Actions" name="Actions" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewFilename">NewFilename</label><input id="cr_NewFilename" name="NewFilename" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="RemotePath">RemotePath</label><input id="cr_RemotePath" name="RemotePath" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PreAction">PreAction</label><input id="cr_PreAction" name="PreAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PostAction">PostAction</label><input id="cr_PostAction" name="PostAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="SourceEncoding">SourceEncoding</label><input id="cr_SourceEncoding" name="SourceEncoding"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="DestEncoding">DestEncoding</label><input id="cr_DestEncoding" name="DestEncoding" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_Char">HEX_Repl_Char</label><input id="cr_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_With">HEX_Repl_With</label><input id="cr_HEX_Repl_With" name="HEX_Repl_With" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewMailboxName">NewMailboxName</label><input id="cr_NewMailboxName" name="NewMailboxName"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label><input id="cr_CONSUMEREXTRACTABLE"
+																		   name="CONSUMEREXTRACTABLE" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label><input id="cr_CONSUMEREXTRACTABLECOUNT"
+																					 name="CONSUMEREXTRACTABLECOUNT"
+																					 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label><input
+				id="cr_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
+		<br>
+	</div>
+	<input value="ConsumerLookup" name="TABLE" type="hidden"><input value="CREATE" name="CRUD" type="hidden"><input
+			class="button button_gr" id="cr_create" value="Create" type="submit"><span id="cls_cr">X</span>
+</form>
+<form action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
+	<div class="text">
+		<label for="Producer">Producer</label><input id="e_Producer" name="Producer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerFilename">ProducerFilename</label><input id="e_ProducerFilename" name="ProducerFilename"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerLanguage">ProducerLanguage</label><input id="e_ProducerLanguage" name="ProducerLanguage"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerEmail">ProducerEmail</label><input id="e_ProducerEmail" name="ProducerEmail" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Consumer">Consumer</label><input id="e_Consumer" name="Consumer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerLanguage">ConsumerLanguage</label><input id="e_ConsumerLanguage" name="ConsumerLanguage"
+																	 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerEmail">ConsumerEmail</label><input id="e_ConsumerEmail" name="ConsumerEmail" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerStatus">ConsumerStatus</label><input id="e_ConsumerStatus" name="ConsumerStatus"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NotifyDelivery">NotifyDelivery</label><input id="e_NotifyDelivery" name="NotifyDelivery"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="KeepMappingWhenErr">KeepMappingWhenErr</label><input id="e_KeepMappingWhenErr"
+																		 name="KeepMappingWhenErr" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Actions">Actions</label><input id="e_Actions" name="Actions" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewFilename">NewFilename</label><input id="e_NewFilename" name="NewFilename" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="RemotePath">RemotePath</label><input id="e_RemotePath" name="RemotePath" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PreAction">PreAction</label><input id="e_PreAction" name="PreAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PostAction">PostAction</label><input id="e_PostAction" name="PostAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="SourceEncoding">SourceEncoding</label><input id="e_SourceEncoding" name="SourceEncoding"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="DestEncoding">DestEncoding</label><input id="e_DestEncoding" name="DestEncoding" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_Char">HEX_Repl_Char</label><input id="e_HEX_Repl_Char" name="HEX_Repl_Char" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_With">HEX_Repl_With</label><input id="e_HEX_Repl_With" name="HEX_Repl_With" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewMailboxName">NewMailboxName</label><input id="e_NewMailboxName" name="NewMailboxName"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label><input id="e_CONSUMEREXTRACTABLE"
+																		   name="CONSUMEREXTRACTABLE" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label><input id="e_CONSUMEREXTRACTABLECOUNT"
+																					 name="CONSUMEREXTRACTABLECOUNT"
+																					 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label><input
+			id="e_CONSUMEREXTRACTABLEDURATION" name="CONSUMEREXTRACTABLEDURATION" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="OBJECT_ID">OBJECT_ID</label><input readonly id="e_OBJECT_ID" name="OBJECT_ID" type="text">
+		<br>
+	</div>
+	<input value="ConsumerLookup" name="TABLE" type="hidden"><input value="UPDATE" name="CRUD" type="hidden"><input
+		class="button button_yl" value="Update" type="submit"><span id="cls_e">X</span>
+</form>
+<form action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
+	<div class="text">
+		<label for="Producer">Producer</label><input readonly id="d_Producer" name="Producer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerFilename">ProducerFilename</label><input readonly id="d_ProducerFilename"
+																	 name="ProducerFilename" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerLanguage">ProducerLanguage</label><input readonly id="d_ProducerLanguage"
+																	 name="ProducerLanguage" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ProducerEmail">ProducerEmail</label><input readonly id="d_ProducerEmail" name="ProducerEmail"
+															   type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Consumer">Consumer</label><input readonly id="d_Consumer" name="Consumer" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerLanguage">ConsumerLanguage</label><input readonly id="d_ConsumerLanguage"
+																	 name="ConsumerLanguage" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerEmail">ConsumerEmail</label><input readonly id="d_ConsumerEmail" name="ConsumerEmail"
+															   type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="ConsumerStatus">ConsumerStatus</label><input readonly id="d_ConsumerStatus" name="ConsumerStatus"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NotifyDelivery">NotifyDelivery</label><input readonly id="d_NotifyDelivery" name="NotifyDelivery"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="KeepMappingWhenErr">KeepMappingWhenErr</label><input readonly id="d_KeepMappingWhenErr"
+																		 name="KeepMappingWhenErr" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="Actions">Actions</label><input readonly id="d_Actions" name="Actions" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewFilename">NewFilename</label><input readonly id="d_NewFilename" name="NewFilename" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="RemotePath">RemotePath</label><input readonly id="d_RemotePath" name="RemotePath" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PreAction">PreAction</label><input readonly id="d_PreAction" name="PreAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="PostAction">PostAction</label><input readonly id="d_PostAction" name="PostAction" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="SourceEncoding">SourceEncoding</label><input readonly id="d_SourceEncoding" name="SourceEncoding"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="DestEncoding">DestEncoding</label><input readonly id="d_DestEncoding" name="DestEncoding"
+															 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_Char">HEX_Repl_Char</label><input readonly id="d_HEX_Repl_Char" name="HEX_Repl_Char"
+															   type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="HEX_Repl_With">HEX_Repl_With</label><input readonly id="d_HEX_Repl_With" name="HEX_Repl_With"
+															   type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="NewMailboxName">NewMailboxName</label><input readonly id="d_NewMailboxName" name="NewMailboxName"
+																 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLE">CONSUMEREXTRACTABLE</label><input readonly id="d_CONSUMEREXTRACTABLE"
+																		   name="CONSUMEREXTRACTABLE" type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLECOUNT">CONSUMEREXTRACTABLECOUNT</label><input readonly
+																					 id="d_CONSUMEREXTRACTABLECOUNT"
+																					 name="CONSUMEREXTRACTABLECOUNT"
+																					 type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="CONSUMEREXTRACTABLEDURATION">CONSUMEREXTRACTABLEDURATION</label><input readonly
+																						   id="d_CONSUMEREXTRACTABLEDURATION"
+																						   name="CONSUMEREXTRACTABLEDURATION"
+																						   type="text">
+		<br>
+	</div>
+	<div class="text">
+		<label for="OBJECT_ID">OBJECT_ID</label><input readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text">
+		<br>
+	</div>
+	<input value="ConsumerLookup" name="TABLE" type="hidden"><input value="DELETE" name="CRUD" type="hidden"><input
+		class="button button_rd" id="d_submit" value="Delete" type="submit"><span id="cls_d">X</span>
+</form>
+<br>
+<div id="footer"> Copyright © 2016. NPD. All Rights Reserved. Restricted Rights</div>
+</body>
+</html>

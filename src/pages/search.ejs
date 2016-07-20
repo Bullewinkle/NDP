@@ -1,0 +1,62 @@
+<!--
+	webpack
+	webpackConfig
+	webpackConfig
+-->
+
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dynamic Routing Query</title>
+	<script language="JavaScript">
+		function copyConsumer() {
+			var f = document.singleDRSearchRequest;
+			f.Consumer.value = f.Consumer.value;
+		}
+
+		function validateAndSubmit() {
+			var theform = document.singleDRSearchRequest;
+			var df, dt;
+
+
+			if (theform.ActionType.value == "") {
+				alert("Please enter Action Type");
+				return false;
+			}
+
+			theform.submit();
+		}
+	</script>
+</head>
+<body>
+
+<p align="center">
+	<font color="blue" size="5"><b>NPD</b></font>
+</p>
+<p align="center">
+	<font size="4">Dynamic Routing Search</font>
+</p>
+<form method="post" action="./singleDRSearchRequest" name="singleDRSearchRequest">
+	<table border="0" align="center">
+		<tr>
+			<td align="right">Search</td>
+			<td><select name="ActionType">
+				<option value="ProducerActions">Producer Actions</option>
+				<option value="ConsumerLookup">Consumer Lookup</option>
+				<option value="ACTIONS">ACTIONS</option>
+				<option value="ACTIONSTEP">ACTION STEP</option>
+				<option value="DIRMONITOR">DIR MONITOR</option>
+				<option value="ProducerExtractionAction">Producer Extraction Action</option>
+				<option value="ConsumerSubFolders">Consumer Sub Folders</option>
+			</select></td>
+		</tr>
+	</table>
+	<p align="center">
+		<input class="button button_gr" value="Reset" type="reset"><input class="button button_bl"
+																		  onclick="validateAndSubmit()" value="Search"
+																		  type="button">
+	</p>
+</form>
+<p></p>
+</body>
+</html>
