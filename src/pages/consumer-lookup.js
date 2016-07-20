@@ -121,7 +121,6 @@ class View {
 	}
 
 	onCloseEditFormClick(e) {
-		console.warn('onCloseEditFormClick ');
 		this.hideEl(this.ui.editFormWrapper);
 	}
 
@@ -166,7 +165,6 @@ class View {
 	}
 
 	onGetCsvClick(e) {
-		console.warn("onGetCsvClick", e, this)
 		this.saveToCSV(this.parseTable());
 	}
 
