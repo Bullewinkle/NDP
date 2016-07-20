@@ -1,4 +1,4 @@
-app = window.app || {};
+window.app = window.app || {};
 
 console.warn("!!consumer-lookup!!");
 function goHome() {
@@ -10,7 +10,7 @@ class View {
 		this.addEvent = app.addEvent;
 
 		this.ui = {
-			table: document.querySelectorAll('table'),
+			table: document.getElementById('t_id'),
 
 			createForm: document.getElementById('create_form'),
 			createFormSubmit: document.getElementById('cr_create'),
@@ -30,7 +30,9 @@ class View {
 			deleteFormWrapper: document.getElementById('delete_form_wrapper'),
 			deleteFormCloser: document.getElementById('cls_d'),
 
-			getCsv: document.getElementById("get_csv")
+			getCsv: document.getElementById("get_csv"),
+
+			pagination: document.querySelectorAll(".pagination")[0]
 		};
 
 		this.addEvent(this.ui.createRow, "click", this.onCreateRowClick, this);
@@ -44,6 +46,8 @@ class View {
 
 		this.addEvent(this.ui.getCsv, "click", this.onGetCsvClick, this);
 
+		this.initPaginationForTable(this.ui.table, this.ui.pagination);
+		this.showEl(this.ui.table);
 	}
 
 	onCreateRowClick(e) {
@@ -169,7 +173,7 @@ class View {
 	}
 
 	parseTable() {
-		let table = this.ui.table[0];
+		let table = this.ui.table;
 		let removeCols = 2;
 		return _.chain(table.rows)
 			.reduce((memo, row)=> {
@@ -180,12 +184,12 @@ class View {
 					.value();
 				memo.push(rowArray);
 				return memo
-			},[])
+			}, [])
 			.value();
 	}
 
-	saveToCSV(data=[],fileName="NDP.csv") {
-		var csvContent = _.reduce(data,(memo, row, index) => {
+	saveToCSV(data = [], fileName = "NDP.csv") {
+		var csvContent = _.reduce(data, (memo, row, index) => {
 			let dataString = row.join(",");
 			memo += index < data.length ? dataString + "\n" : dataString;
 			return memo;
@@ -199,7 +203,100 @@ class View {
 
 		link.click();
 
-		setTimeout(()=>{link.remove()},0)
+		setTimeout(()=> {
+			link.remove()
+		}, 0)
+	}
+
+	initPaginationForTable(table, pagination) {
+		if (!table || !pagination) {
+			return console.warn("initPaginationForTable must have 2 arguments");
+		}
+
+		let model = {
+			currentPage: 0,
+			showBy: 10,
+			totalItems: table.rows.length,
+			totalPages: Math.floor(table.rows.length/10)
+		}
+
+		let showPage = (index=0, e={}) => {
+			model['currentPage'] = index;
+
+			let currentPaginationEl = (e.currentTarget || pagination.children[1]);
+			_.each(pagination.children, (el, i, ar)=> {
+				if (el == currentPaginationEl) {
+					el.className = "active";
+				} else {
+					el.className = "";
+				}
+			})
+
+			_.each(table.tBodies[0].rows, (row, index, rows) => {
+				let from = model['currentPage'] * model['showBy']
+				let to = from + model['showBy'];
+				if (from <= index && index <= to) {
+					row.className = "";
+				} else {
+					row.className = "hide";
+				}
+			})
+
+			history.pushState({
+				query: {
+					page: model['currentPage']
+				}
+			},``,`?page=${model['currentPage']}`)
+		}
+
+		let commmonClickHander = (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+		};
+
+		let prevButtonClickHandler = (index, e) => {
+			commmonClickHander(e);
+			showPage.apply(this, [index, e]);
+		}
+		let nextButtonClickHandler = (index, e) => {
+			commmonClickHander(e);
+			showPage.apply(this, [index, e]);
+		}
+		let indexButtonClickHandler = (index, e) => {
+			commmonClickHander(e);
+			showPage.apply(this, [index, e]);
+		}
+
+
+		_.each((new Array(model['totalPages'])), (el, i, ar)=> {
+			let prevTemplate = (i) => `<a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>`
+			let nextTemplate = (i) => `<a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a>`
+			let indexTemplate = (i) => `<a href="#">${i+1}</a>`
+
+			// prev button
+			if (i === 0) {
+				let button = document.createElement("li")
+				button.innerHTML = prevTemplate(i);
+				this.addEvent(button, "click", prevButtonClickHandler.bind(this, i));
+				pagination.appendChild(button);
+			}
+
+			let button = document.createElement("li")
+			button.innerHTML = indexTemplate(i);
+			this.addEvent(button, "click", indexButtonClickHandler.bind(this, i));
+			pagination.appendChild(button);
+
+			// next button
+			if (i === ar.length - 1) {
+				let button = document.createElement("li")
+				button.innerHTML = nextTemplate(i);
+				this.addEvent(button, "click", nextButtonClickHandler.bind(this, i));
+				pagination.appendChild(button);
+			}
+		});
+
+		showPage(0);
+		console.info('initPaginationForTable', table, pagination)
 	}
 
 	hideEl(el) {
