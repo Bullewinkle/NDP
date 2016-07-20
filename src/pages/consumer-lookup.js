@@ -220,11 +220,14 @@ class View {
 			totalPages: Math.floor(table.rows.length/10)
 		}
 
-		let showPage = (index=0, e={}) => {
+		let showPage = (index=0, e={}, trigger=true) => {
 			model['currentPage'] = index;
 
-			let currentPaginationEl = (e.currentTarget || pagination.children[1]);
-			_.each(pagination.children, (el, i, ar)=> {
+			// let indexChildren = _.slice(table.tBodies[0].rows,1,-1)
+			let indexChildren = pagination.querySelectorAll('[data-index-pagination]')
+			let currentPaginationEl = (e.currentTarget || indexChildren[index]);
+
+			_.each(indexChildren, (el, i, ar)=> {
 				if (el == currentPaginationEl) {
 					el.className = "active";
 				} else {
@@ -242,11 +245,13 @@ class View {
 				}
 			})
 
-			history.pushState({
-				query: {
-					page: model['currentPage']
-				}
-			},``,`?page=${model['currentPage']}`)
+			if (trigger) {
+				history.pushState({
+					query: {
+						page: +model['currentPage']
+					}
+				},``,`?page=${+model['currentPage']}`)
+			}
 		}
 
 		let commmonClickHander = (e) => {
@@ -283,6 +288,7 @@ class View {
 
 			let button = document.createElement("li")
 			button.innerHTML = indexTemplate(i);
+			button.setAttribute("data-index-pagination",i)
 			this.addEvent(button, "click", indexButtonClickHandler.bind(this, i));
 			pagination.appendChild(button);
 
@@ -295,8 +301,9 @@ class View {
 			}
 		});
 
-		showPage(0);
-		console.info('initPaginationForTable', table, pagination)
+		let urlMatch = location.search.match(/page=([\d])/)
+		let initialPage = (urlMatch? urlMatch[1] : null)|| model['currentPage'];
+		showPage(initialPage,{},false);
 	}
 
 	hideEl(el) {
