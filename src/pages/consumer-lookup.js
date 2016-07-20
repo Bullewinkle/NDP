@@ -186,7 +186,7 @@ class View {
 			.value();
 	}
 
-	saveToCSV(data=[],fileName="my_data.csv") {
+	saveToCSV(data=[],fileName="NDP.csv") {
 		var csvContent = _.reduce(data,(memo, row, index) => {
 			let dataString = row.join(",");
 			memo += index < data.length ? dataString + "\n" : dataString;
