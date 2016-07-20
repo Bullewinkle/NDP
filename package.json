@@ -19,6 +19,8 @@
     "lodash": "^4.13.1",
     "style-loader": "^0.13.1",
     "postcss-loader":"*",
+    "url-loader": "*",
+    "file-loader": "*",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
     "webpack": "*",

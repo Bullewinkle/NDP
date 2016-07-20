@@ -1,3 +1,4 @@
 console.warn("common");
-// require("./css/index.styl");
-require("./css/index.css");
+require("./css/bootstrap.styl");
+
+// require("./css/index.css");
