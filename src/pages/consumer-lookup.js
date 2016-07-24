@@ -1,16 +1,19 @@
 window.app = window.app || {};
-
 console.warn("!!consumer-lookup!!");
-function goHome() {
-	var theform = document.goHome;
-}
+
+import {saveAs} from 'file-saver';
 
 class View {
 	constructor() {
 		this.addEvent = app.addEvent;
 
+		let tableEl = document.getElementById('t_id');
+
 		this.ui = {
-			table: document.getElementById('t_id'),
+			table: tableEl,
+			tableBody: tableEl.tBodies[0],
+			tableRows: tableEl.querySelectorAll("tr"),
+			tableCells: tableEl.querySelectorAll("td"),
 
 			createForm: document.getElementById('create_form'),
 			createFormSubmit: document.getElementById('cr_create'),
@@ -46,7 +49,14 @@ class View {
 
 		this.addEvent(this.ui.getCsv, "click", this.onGetCsvClick, this);
 
-		this.addEvent(this.ui.table.tBodies[0].rows, "click", this.onRowClick, this);
+		let activeRows = _.filter(this.ui.tableRows, (el,i) => i>0);
+		this.addEvent( activeRows , "click", this.onRowClick, this);
+		_.each(activeRows, (row,i) => {
+			let activeCells = _.filter(row.children,(el,i)=> true);
+			this.addEvent( activeCells , "click", this.onCellClick, this);
+		});
+
+		// }), "click", this.onCellClick, this);
 
 		this.initPaginationForTable(this.ui.table, this.ui.pagination);
 		this.showEl(this.ui.table);
@@ -82,7 +92,7 @@ class View {
 		this.hideEl(this.ui.editFormWrapper);
 		this.hideEl(this.ui.deleteFormWrapper);
 		this.showEl(this.ui.createFormWrapper);
-		document.getElementById('cr_create').focus()
+		document.getElementById('cr_Producer').focus()
 	}
 
 	onCloseCreateRowClick(e) {
@@ -158,12 +168,13 @@ class View {
 		document.getElementById('d_CONSUMEREXTRACTABLEDURATION').value = tr_parent.querySelector('.row_CONSUMEREXTRACTABLEDURATION').innerHTML;
 		document.getElementById('d_OBJECT_ID').value = tr_parent.querySelector('.row_OBJECT_ID').innerHTML;
 
+
 		// display the form, and focus on a form field
 
 		this.hideEl(this.ui.createFormWrapper);
 		this.hideEl(this.ui.editFormWrapper);
 		this.showEl(this.ui.deleteFormWrapper);
-		document.getElementById('d_submit').focus();
+		document.getElementById('d_Producer').focus();
 	}
 
 	onCloseDeleteRowClick(e) {
@@ -172,10 +183,20 @@ class View {
 
 	onRowClick(e) {
 		let current = e.currentTarget;
-		_.each(this.ui.table.tBodies[0].rows,(row,i) => {
-			this.removeClass(row,'highlighted')
+		let activeClass = 'row-highlighted';
+		_.each(this.ui.tableRows,(row,i) => {
+			this.removeClass(row,activeClass);
 		})
-		this.addClass(current,'highlighted')
+		this.addClass(current,activeClass);
+	}
+
+	onCellClick(e) {
+		let current = e.currentTarget;
+		let activeClass = 'cell-highlighted';
+		_.each( this.ui.tableCells, (cell)  => {
+			this.removeClass(cell,activeClass)
+		});
+		this.addClass(current,activeClass);
 	}
 
 	onGetCsvClick(e) {
@@ -199,23 +220,21 @@ class View {
 	}
 
 	saveToCSV(data = [], fileName = "NDP.csv") {
+		// expecting format:
+		// data = [
+		//		[	'name1',	'name2',	'name3'	]
+		//		[	'foo',		'1',		'2'		]
+		//		[	'bar',		'3',		'4'		]
+		// ]
+
+		var csvStart = "";
 		var csvContent = _.reduce(data, (memo, row, index) => {
 			let dataString = row.join(",");
-			memo += index < data.length ? dataString + "\n" : dataString;
+			memo += index > data.length ? dataString : dataString + "\n";
 			return memo;
-		}, "data:text/csv;charset=utf-8,");
-
-		var encodedUri = encodeURI(csvContent);
-		var link = document.createElement("a");
-		link.setAttribute("href", encodedUri);
-		link.setAttribute("download", fileName);
-		document.body.appendChild(link); // Required for FF
-
-		link.click();
-
-		setTimeout(()=> {
-			link.remove()
-		}, 0)
+		}, csvStart);
+		var blob = new Blob([csvContent], {type: "text/csv;charset=utf-8"});
+		saveAs(blob, fileName);
 	}
 
 	initPaginationForTable(table, pagination) {
@@ -228,7 +247,7 @@ class View {
 			showBy: 10,
 			totalItems: table.rows.length,
 			totalPages: Math.floor(table.rows.length/10)
-		}
+		};
 
 		let showPage = (index=0, e={}, trigger=true) => {
 			model['currentPage'] = index;
@@ -243,17 +262,17 @@ class View {
 				} else {
 					this.removeClass(el, 'active')
 				}
-			})
+			});
 
 			_.each(table.tBodies[0].rows, (row, index, rows) => {
 				let from = model['currentPage'] * model['showBy']
 				let to = from + model['showBy'];
-				if (from <= index && index <= to) {
+				if (from <= index && index < to) {
 					this.removeClass(row, 'hide')
 				} else {
 					this.addClass(row, 'hide')
 				}
-			})
+			});
 
 			if (trigger) {
 				history.pushState({
@@ -262,7 +281,7 @@ class View {
 					}
 				},``,`?page=${+model['currentPage']}`)
 			}
-		}
+		};
 
 		let commmonClickHander = (e) => {
 			e.preventDefault();
@@ -272,16 +291,15 @@ class View {
 		let prevButtonClickHandler = (index, e) => {
 			commmonClickHander(e);
 			showPage.apply(this, [index, e]);
-		}
+		};
 		let nextButtonClickHandler = (index, e) => {
 			commmonClickHander(e);
 			showPage.apply(this, [index, e]);
-		}
+		};
 		let indexButtonClickHandler = (index, e) => {
 			commmonClickHander(e);
 			showPage.apply(this, [index, e]);
-		}
-
+		};
 
 		_.each((new Array(model['totalPages'])), (el, i, ar)=> {
 			let prevTemplate = (i) => `<a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>`
@@ -324,10 +342,17 @@ class View {
 	}
 
 	addClass(el,className) {
-		el.classList.add(className);
+		// el.classList.add(className);
+		if (el.className.search(className) > -1) return false;
+		el.className = `${el.className} ${className}`
+			.trim();
 	}
 	removeClass(el,className) {
-		el.classList.remove(className);
+		// el.classList.remove(className);
+		if (el.className.search(className) === -1) return false;
+		el.className = el.className
+			.replace(className,'')
+			.trim();
 	}
 
 }

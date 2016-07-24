@@ -25,13 +25,12 @@ webpackConfig
 		<input class="btn btn-default" value="Home" type="submit">
 	</form>
 	<div class="clearfix l-mb-20">
-		<label class="pull-left" style="color:#7591DD; font-weight: bold; text-align:center; display: block; padding: 1px 10px;" for="create_row">ConsumerLookup
-			List</label>
+		<h3 style="color:#7591DD; font-weight: bold; text-align:center; display: block; padding: 1px 10px;">ConsumerLookup List</h3>
 
-		<div class="btn-group pull-right" role="group" aria-label="...">
+		<div class="btn-group pull-left" role="group" aria-label="...">
 			<!--<input name="create_row" class="button button_bl" id="create_row" value="Create New" type="button">-->
-			<button name="get_csv" class="btn btn-info" id="get_csv" type="button">Save to .csv</button>
 			<button name="create_row" class="btn btn-success" id="create_row" type="button">Create New</button>
+			<button name="get_csv" class="btn btn-info" id="get_csv" type="button">Save to .csv</button>
 		</div>
 	</div>
 
@@ -923,26 +922,26 @@ webpackConfig
 		</nav>
 	</div>
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
+		<div class="col-sm-6 col-sm-offset-3">
 
-			<div id="create_form_wrapper" class="panel panel-success" style="display:none;">
+			<div id="create_form_wrapper" class="form-wrapper panel panel-success" style="display:none;">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title col-xs-11">Create new</h3>
 					<div class="text-center col-xs-1"><span class="close-button" id="cls_cr">X</span></div>
 				</div>
 				<div class="panel-body">
-					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
+					<form class="" action="./singleDRACTIONS" name="singleDRACTIONS" id="create_form" method="post">
 						<div class="form-group">
 							<label class="col-md-5 control-label" for="Producer">Producer</label>
 							<div class="col-md-7">
-								<input placeholder="placeholder" class="form-control" id="cr_Producer" name="Producer" type="text">
+								<input placeholder="placeholder"  class="form-control" id="cr_Producer" name="Producer" type="text">
 							</div>
 						</div>
 						<div class="form-group">
 
-							<label class="col-md-5 control-label" for="ProducerFilename">ProducerFilename</label>
+							<label class="col-md-5 control-label" readonly for="ProducerFilename">ProducerFilename</label>
 							<div class="col-md-7">
-								<input placeholder="placeholder" class="form-control" id="cr_ProducerFilename" name="ProducerFilename" type="text">
+								<input placeholder="placeholder" class="form-control" id="cr_ProducerFilename" readonly name="ProducerFilename" type="text">
 							</div>
 						</div>
 						<div class="form-group">
@@ -1072,6 +1071,19 @@ webpackConfig
 							</div>
 						</div>
 						<div class="form-group">
+							<label class="col-md-5 control-label" for="">drop-down</label>
+							<div class="col-md-7">
+								<select name="" id="" class="form-control">
+									<option value="1">Вариант 1</option>
+									<option value="2">Вариант 2</option>
+									<option value="3">Вариант 3</option>
+									<option value="4">Вариант 4</option>
+									<option value="5">Вариант 5</option>
+									<option value="6">Вариант 6</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
 							<div class="col-md-offset-5 col-md-7">
 								<input class="btn btn-success" id="cr_create" value="Create" type="submit">
 							</div>
@@ -1083,17 +1095,17 @@ webpackConfig
 				</div>
 			</div>
 
-			<div id="edit_form_wrapper" class="panel panel-warning" style="display:none;">
+			<div id="edit_form_wrapper" class="form-wrapper panel panel-warning" style="display:none;">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title col-xs-11">Update</h3>
 					<div class="text-center col-xs-1"><span class="close-button" id="cls_e">X</span></div>
 				</div>
 				<div class="panel-body">
-					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
+					<form class="" action="./singleDRACTIONS" name="singleDRACTIONS" id="edit_form" method="post">
 						<div class="form-group">
 							<label class="col-md-5 control-label" for="Producer">Producer</label>
 							<div class="col-md-7">
-								<input class=form-control" id="e_Producer" name="Producer" type="text">
+								<input class="form-control" id="e_Producer" readonly name="Producer" type="text">
 							</div>
 
 						</div>
@@ -1252,6 +1264,19 @@ webpackConfig
 							</div>
 						</div>
 						<div class="form-group">
+							<label class="col-md-5 control-label" for="">drop-down</label>
+							<div class="col-md-7">
+								<select name="" id="" class="form-control">
+									<option value="1">Вариант 1</option>
+									<option value="2">Вариант 2</option>
+									<option value="3">Вариант 3</option>
+									<option value="4">Вариант 4</option>
+									<option value="5">Вариант 5</option>
+									<option value="6">Вариант 6</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
 							<div class="col-md-offset-5 col-md-7">
 								<!--<input class="button button_yl" value="Update" type="submit">-->
 								<input class="btn btn-warning" value="Update" type="submit">
@@ -1263,13 +1288,13 @@ webpackConfig
 				</div>
 			</div>
 
-			<div id="delete_form_wrapper" class="panel panel-danger" style="display:none;">
+			<div id="delete_form_wrapper" class="form-wrapper panel panel-danger" style="display:none;">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title col-xs-11">Delete</h3>
 					<div class="text-center col-xs-1"><span class="close-button" id="cls_d">X</span></div>
 				</div>
 				<div class="panel-body">
-					<form class="form-horizontal" action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
+					<form class="" action="./singleDRACTIONS" name="singleDRACTIONS" id="delete_form" method="post">
 						<div class="form-group">
 							<label class="col-md-5 control-label" for="Producer">Producer</label>
 							<div class="col-md-7">
@@ -1431,6 +1456,19 @@ webpackConfig
 							<label class="col-md-5 control-label" for="OBJECT_ID">OBJECT_ID</label>
 							<div class="col-md-7">
 								<input class="form-control" readonly id="d_OBJECT_ID" name="OBJECT_ID" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="">drop-down</label>
+							<div class="col-md-7">
+								<select name="" id="" class="form-control">
+									<option value="1">Вариант 1</option>
+									<option value="2">Вариант 2</option>
+									<option value="3">Вариант 3</option>
+									<option value="4">Вариант 4</option>
+									<option value="5">Вариант 5</option>
+									<option value="6">Вариант 6</option>
+								</select>
 							</div>
 						</div>
 						<div class="form-group">
