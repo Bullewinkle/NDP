@@ -1,0 +1,18 @@
+.row-highlighted
+	> td:nth-child(n+3)
+		background $state-success-bg !important
+
+.cell-highlighted
+	position: relative !important
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		border 2px solid $brand-danger
+
+.control-label
+	text-align right
+	overflow: hidden

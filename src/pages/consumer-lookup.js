@@ -1,6 +1,7 @@
 window.app = window.app || {};
 console.warn("!!consumer-lookup!!");
 
+import './consumer-lookup.styl'
 import {saveAs} from 'file-saver';
 
 class View {

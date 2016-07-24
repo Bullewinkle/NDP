@@ -29,34 +29,51 @@
 	</script>
 </head>
 <body>
+<div class="container-fluid">
+	<h1 class="text-primary text-center">NDP</h1>
+	<h4 class="text-center">Dynamic Routing Search</h4>
 
-<p align="center">
-	<font color="blue" size="5"><b>NPD</b></font>
-</p>
-<p align="center">
-	<font size="4">Dynamic Routing Search</font>
-</p>
-<form method="post" action="./singleDRSearchRequest" name="singleDRSearchRequest">
-	<table border="0" align="center">
-		<tr>
-			<td align="right">Search</td>
-			<td><select name="ActionType">
-				<option value="ProducerActions">Producer Actions</option>
-				<option value="ConsumerLookup">Consumer Lookup</option>
-				<option value="ACTIONS">ACTIONS</option>
-				<option value="ACTIONSTEP">ACTION STEP</option>
-				<option value="DIRMONITOR">DIR MONITOR</option>
-				<option value="ProducerExtractionAction">Producer Extraction Action</option>
-				<option value="ConsumerSubFolders">Consumer Sub Folders</option>
-			</select></td>
-		</tr>
-	</table>
-	<p align="center">
-		<input class="button button_gr" value="Reset" type="reset"><input class="button button_bl"
-																		  onclick="validateAndSubmit()" value="Search"
-																		  type="button">
-	</p>
-</form>
-<p></p>
+	<div class="row">
+		<div class="col-xs-12">
+			<form	style="max-width:230px;"
+					class="form form-horizontal center-block"
+					 method="post"
+					 action="./singleDRSearchRequest"
+					 name="singleDRSearchRequest">
+
+				<div class="form-group">
+					<label for="globalSearch" class="col-xs-3 control-label">Search</label>
+					<div class="col-xs-9">
+						<select id="globalSearch" class="col-sm-5 form-control" name="ActionType">
+							<option value="ProducerActions">Producer Actions</option>
+							<option value="ConsumerLookup">Consumer Lookup</option>
+							<option value="ACTIONS">ACTIONS</option>
+							<option value="ACTIONSTEP">ACTION STEP</option>
+							<option value="DIRMONITOR">DIR MONITOR</option>
+							<option value="ProducerExtractionAction">Producer Extraction Action</option>
+							<option value="ConsumerSubFolders">Consumer Sub Folders</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group text-center">
+					<button name=""
+							class="btn btn-success"
+							id="create_row"
+							type="reset"
+					>Reset</button>
+
+					<button name=""
+							class="btn btn-primary"
+							id="get_csv"
+							type="button"
+							onclick="validateAndSubmit()"
+					>Search</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>
