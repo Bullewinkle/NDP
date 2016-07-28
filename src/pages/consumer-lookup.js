@@ -5,7 +5,6 @@ import {saveAs} from 'file-saver';
 
 class View {
 	constructor() {
-		this.addEvent = app.addEvent;
 
 		let tableEl = document.getElementById('t_id');
 
@@ -37,6 +36,8 @@ class View {
 
 			pagination: document.querySelectorAll(".pagination")[0]
 		};
+
+		this.addEvent = app.addEvent;
 
 		this.addEvent(this.ui.createRow, "click", this.onCreateRowClick, this);
 		this.addEvent(this.ui.createFormCloser, "click", this.onCloseCreateRowClick, this);
@@ -347,6 +348,7 @@ class View {
 		el.className = `${el.className} ${className}`
 			.trim();
 	}
+
 	removeClass(el,className) {
 		// el.classList.remove(className);
 		if (el.className.search(className) === -1) return false;
