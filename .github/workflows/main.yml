@@ -43,6 +43,6 @@ jobs:
           # An explicit key for restoring and saving the cache
           key: 'experiments'
           # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
-          # restore-keys: 'experiments' # optional
+          restore-keys: 'experiments' # optional
           # The chunk size used to split up large files during upload, in bytes
           upload-chunk-size: 65536 # optional
